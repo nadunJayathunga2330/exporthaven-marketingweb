@@ -54,6 +54,7 @@
   gap: 2rem;
 }
 
+/* Desktop nav link styling */
 .nav-link {
   color: var(--color-text);
   text-decoration: none;
@@ -97,24 +98,31 @@
   background-color: var(--color-secondary);
 }
 
+/* MEDIA QUERY FOR MOBILE */
 @media (max-width: 1023px) {
   .menu-toggle {
     display: block;
   }
 
+  /* Hide nav-links on mobile until the menu is open */
   .nav-links {
     display: none;
-    position: fixed;
-    inset: 4rem 0 0 0;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-background);
-    padding: 2rem;
   }
 
+  /* Show nav-links when active */
   .nav-links.active {
     display: flex;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-background);
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+    z-index: 9999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .nav-buttons {

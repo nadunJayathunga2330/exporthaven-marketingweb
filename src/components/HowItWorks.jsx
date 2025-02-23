@@ -23,7 +23,7 @@ export const HowItWorks = () => {
         "Our AI-powered system matches you with the right trading partners.",
     },
     {
-      title: "Finalize Orders & Expand Your Business",
+      title: "Finalize Orders & Expand Your Business.",
       icon: <TrendingUp size={28} />,
       description:
         "Securely close deals and leverage our support to expand your business beyond borders, driving growth and innovation.",
