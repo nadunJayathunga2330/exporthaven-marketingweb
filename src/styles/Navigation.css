@@ -1,0 +1,123 @@
+.navigation {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 50;
+  transition: all 0.3s ease;
+  background: rgba(245, 247, 250, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.navigation.scrolled {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  background: rgba(245, 247, 250, 0.95);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-primary);
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logo-image {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: var(--color-secondary);
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-btn {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.login-btn:hover {
+  color: var(--color-secondary);
+}
+
+.get-started-btn {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.get-started-btn:hover {
+  background-color: var(--color-secondary);
+}
+
+@media (max-width: 1023px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    inset: 4rem 0 0 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-background);
+    padding: 2rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-buttons {
+    display: none;
+  }
+}
